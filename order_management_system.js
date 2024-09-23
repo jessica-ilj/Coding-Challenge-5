@@ -67,3 +67,11 @@ function completeOrder (customerName){
     }
  }
  
+ //Function to Check Pending Orders
+
+ function checkPendingOrders(){   //iterates over the orders array and logs the details of all orders that are still "Pending".
+    let pendingOrders = orders.filter(order => order.status == 'Pending');  
+
+    console.log(pendingOrders);
+}
+
