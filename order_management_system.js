@@ -75,3 +75,17 @@ function completeOrder (customerName){
     console.log(pendingOrders);
 }
 
+//testing the functions to see how they work.
+
+placeOrder('Ahmad', [{ name: 'Latte', quantity: 1 }, { name: 'Cappuccino', quantity: 2 }]);
+placeOrder('Karimullah', [{ name: 'Mocha', quantity: 1 }, {name: 'Latte', quantity: 2}, {name: 'Cappuccino', quantity: 1 }]);
+completeOrder('Ahmad');
+const result = calculateOrderTotal(orders[0])
+
+
+
+
+
+
+checkPendingOrders();
+console.log(orders);
