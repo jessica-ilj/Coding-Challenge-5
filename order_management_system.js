@@ -17,7 +17,7 @@ function placeOrder(customer, orderedItems) {  //accepts the customer name and a
     let ordered = [];
     orderedItems.forEach(item => {
         let product = inventory.find(product => product.name == item.name)
-        if (product.quantity >= item.quantity) {
+        if (product.quantity >= item.quantity) { //Check if there are enough products in stock for each item in the order
 
             product.quantity -= item.quantity
 
@@ -29,4 +29,17 @@ function placeOrder(customer, orderedItems) {  //accepts the customer name and a
         }
     })
 
-//
+
+const newOrder = { //Adding a new order to the orders array with the status set to "Pending".
+    
+    customer,
+    items: ordered,
+    status: 'Pending'
+}
+
+orders.push(newOrder)
+
+
+
+
+}
