@@ -43,3 +43,17 @@ orders.push(newOrder)
 
 
 }
+
+// Function to Calculate Total for an Order
+
+function calculateOrderTotal(order) {   //accepts an order object and calculates the total price of the order by summing the prices of all ordered items
+    let result = order.items.reduce((total, item) => {
+
+        let product = inventory.find(product => product.name == item.name)
+
+        return total + (product.price * item.quantity)
+    }, 0)
+    return result;
+
+}
+
