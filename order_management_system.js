@@ -57,3 +57,13 @@ function calculateOrderTotal(order) {   //accepts an order object and calculates
 
 }
 
+//Function to Mark an Order as Completed
+function completeOrder (customerName){
+    let order = orders.find(order => order.customer == customerName)
+    if(order){
+     order.status = 'Completed';  // finds the order with the matching customerName in the orders array and changes its status to "Completed"
+    }else{
+     console.log(`${customerName} not in ordered list`);
+    }
+ }
+ 
